@@ -21,11 +21,9 @@ var level = 0;
 $(".btn").on("click", function() {
               
     var userChosenColour = $(this).attr("id");
-    //from where should I take current level?
     userClickedPattern.push(userChosenColour);
-    console.log(userClickedPattern);
+    
     var currentLevel = userClickedPattern.length-1;
-    console.log(currentLevel);
 
     checkAnswer(currentLevel);
     
@@ -48,12 +46,11 @@ function nextSequence(){
   var randomNumber = Math.floor(Math.random()*4);
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour); 
-  console.log(gamePattern);
+ 
   var activeButton = $("#"+randomChosenColour);
 
   activeButton.animate({opacity:0}, 300).animate({opacity:1});
 
- //$("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
   playSound(randomChosenColour);
  }
 
@@ -70,7 +67,6 @@ function nextSequence(){
  function checkAnswer(currentLevel){
 if (userClickedPattern[currentLevel]===gamePattern[currentLevel])
 {
-  console.log("success");
   if (userClickedPattern.length===gamePattern.length){
     setTimeout(function()
   {
@@ -79,7 +75,6 @@ if (userClickedPattern[currentLevel]===gamePattern[currentLevel])
 }
 else
 {
-  console.log("wrong");
   playSound("wrong");
 
   $("body").addClass("game-over");
@@ -93,12 +88,12 @@ else
  }
 
  function startOver(){
-level = 0;
+  level = 0;
 
-gamePattern = [];
+  gamePattern = [];
 
-userClickedPattern = [];
+  userClickedPattern = [];
 
-isGameStarted = false;
+  isGameStarted = false;
 
  }

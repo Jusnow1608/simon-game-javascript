@@ -79,16 +79,26 @@ if (userClickedPattern[currentLevel]===gamePattern[currentLevel])
 }
 else
 {
-  var wrongAnswer = "wrong";
   console.log("wrong");
-  playSound(wrongAnswer);
+  playSound("wrong");
 
   $("body").addClass("game-over");
 
  setTimeout(function() {
         $("body").removeClass("game-over");
     }, 200);
-  $("h1").text("Game Over, Press Any Key to Restart");
+  $("#level-title").text("Game Over, Press Any Key to Restart");
+  startOver();
 }
  }
 
+ function startOver(){
+level = 0;
+
+gamePattern = [];
+
+userClickedPattern = [];
+
+isGameStarted = false;
+
+ }

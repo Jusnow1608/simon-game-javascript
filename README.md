@@ -37,6 +37,7 @@ Users should be able to:
 > Figure 3: Exception handling state. When the user selection array mismatches the game pattern collection, the interface flashes an explicit red background utility state (.game-over) and prompts the user to reset the execution loop.
 ![High level sequence progression](./04-high-level-sequence-progression.jpg)
 > Figure 4: Advanced execution state demonstrating memory and array stability during a high-level sequence loop (e.g., Level 8), proving the reliability of the underlying logical pattern parsing engine.
+
 ![Responsive layout adaptability](./05-responsive-layout-adaptability.jpg)
 
 > Figure 5: Mobile viewport validation. The flexbox grid container shifts layout distributions responsively, scaling the interactive color matrix safely to maintain full user interface accessibility on compact touchscreen mobile displays.

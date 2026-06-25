@@ -37,7 +37,7 @@ function playSound(name){
   var sound = new Audio(soundSource);
   sound.play();
 }
-//building a sequence in each level beggining from 1
+//building a sequence in each level
 function nextSequence(){
   userClickedPattern =[];
   level++;
